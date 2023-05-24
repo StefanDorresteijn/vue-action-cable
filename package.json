@@ -27,7 +27,7 @@
     "build": "webpack --config webpack.config.js --mode=production --progress"
   },
   "dependencies": {
-    "@rails/actioncable": "^6.0.2-2"
+    "@rails/actioncable": "^7.0.4-3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
