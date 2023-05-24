@@ -5,7 +5,12 @@ export default class Cable {
     connection = null
 
     constructor (Vue, options) {
-        Vue.prototype.$cable = this
+        const VERSION = Number(Vue.version.split(".")[0]);
+        if (VERSION === 3) {
+            Vue.config.globalProperties.$cable = this;
+        } else {
+            Vue.prototype.$cable = this;
+        }
         this.setConnectionUrl(options.connectionUrl)
     }
 
