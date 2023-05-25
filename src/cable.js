@@ -11,11 +11,12 @@ export default class Cable {
         } else {
             Vue.prototype.$cable = this;
         }
-        this.setConnectionUrl(options.connectionUrl)
 
         let { connectionUrl, connectImmediately } = options || {
             connectionUrl: null,
         };
+
+        this.setConnectionUrl(connectionUrl)
 
         if (connectImmediately !== false) connectImmediately = true;
 
